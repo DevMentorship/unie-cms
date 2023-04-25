@@ -45,6 +45,12 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+      validation: Rule => Rule.required().max(280).error('Shorter description is usually better. Limit is 280'),
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
