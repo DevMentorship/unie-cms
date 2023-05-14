@@ -35,14 +35,14 @@ export default defineType({
     defineField({
       name: 'Weight',
       title: 'food weight',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
     }),
     defineField({
       name: 'Price',
       title: 'price',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
     }),
     defineField({
       name: 'dishDescription',
@@ -53,26 +53,26 @@ export default defineType({
     defineField({
       name: 'proteins',
       title: 'proteins',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
     }),
     defineField({
       name: 'fats',
       title: 'fats',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
     }),
     defineField({
       name: 'carbohydrates',
       title: 'carbohydrates',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
     }),
     defineField({
       name: 'calories',
       title: 'calories',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
     }),
   ],
 })
