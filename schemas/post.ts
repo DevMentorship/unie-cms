@@ -35,7 +35,6 @@ export default defineType({
       type: 'datetime',
     }),
   ],
-  
   preview: {
     select: {
       title: 'title',
