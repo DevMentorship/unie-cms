@@ -6,23 +6,73 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'Poster',
+      title: 'Poster of dishes',
       type: 'image',
+      validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+        },
+        {
+          name: 'attribution',
+          type: 'string',
+          title: 'Attribution',
+        },
+      ],
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
+      name: 'dishName',
+      title: 'Dish name',
       type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'Weight',
+      title: 'Food weight',
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
+    }),
+    defineField({
+      name: 'Price',
+      title: 'Price',
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
+    }),
+    defineField({
+      name: 'dishDescription',
+      title: 'Dish description',
+      type: 'string',
+      validation: (Rule) => Rule.required().min(10).max(80),
+    }),
+    defineField({
+      name: 'proteins',
+      title: 'Proteins',
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
+    }),
+    defineField({
+      name: 'fats',
+      title: 'Fats',
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
+    }),
+    defineField({
+      name: 'carbohydrates',
+      title: 'Carbohydrates',
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
+    }),
+    defineField({
+      name: 'calories',
+      title: 'Calories',
+      type: 'number',
+      validation: (Rule) => Rule.required().positive(),
     }),
   ],
-  preview: {
-    select: {
-      title: 'description',
-      media: 'mainImage',
-    },
-  },
 })
