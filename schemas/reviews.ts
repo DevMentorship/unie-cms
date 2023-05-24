@@ -6,8 +6,13 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'image',
+      name: 'review',
       title: 'Review',
+      type: 'string',
+    }),
+    defineField({
+      name: 'image',
+      title: 'Photo',
       type: 'image',
     })
   ],
