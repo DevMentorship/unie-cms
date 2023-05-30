@@ -48,7 +48,7 @@ export default defineType({
       name: 'dishDescription',
       title: 'Dish description',
       type: 'string',
-      validation: (Rule) => Rule.required().min(10).max(80),
+      validation: (Rule) => Rule.required().min(10).max(280),
     }),
     defineField({
       name: 'proteins',
